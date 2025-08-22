@@ -1,132 +1,191 @@
 * {
+    /* Resetea los márgenes y rellenos de todos los elementos */
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Para que padding no sume al ancho */
+    box-sizing: border-box; 
+    /* Asegura que el padding y el borde se incluyan en el ancho y alto de los elementos */
 }
 body {
+    /* Define la fuente principal como Arial */
     font-family: Arial, sans-serif;
-    background-color: #ffeb78; /* Gris claro como en imagen */
-    min-height: 100vh; /* Mínimo 100% de la altura de la ventana */
-    display: flex; /* Usa flex para controlar la disposición */
-    flex-direction: column; /* Apila header, main y footer en columna */
+    /* Establece un fondo amarillo claro */
+    background-color: #ffeb78;
+    /* Establece una altura mínima igual a la altura de la ventana */
+    min-height: 100vh; 
+    /* Usa flexbox para organizar el contenido en columna */
+    display: flex; 
+    flex-direction: column; 
+    /* Añade un espacio de 10px entre los elementos flex */
     gap: 10px;
 }
 
 header {
+    /* Añade un espacio de 10px entre los elementos dentro del header */
     gap: 10px;
-    padding: 0; /* Quitamos padding global para controlarlo por bloques */
+    /* Elimina el padding global para controlarlo por secciones */
+    padding: 0; 
+    /* Usa flexbox para organizar el contenido en columna */
     display: flex;
-    flex-direction: column; /* Apila los bloques en columna */
+    flex-direction: column; 
 }
 
 .header-top {
-    display: flex; /* Alinea logo y título en una fila */
-    align-items: center; /* Centra verticalmente */
-    padding: 10px; /* Espacio interno */
-    background-color: #ffda36; /* Fondo gris para este bloque */
+    /* Usa flexbox para alinear elementos en una fila */
+    display: flex; 
+    /* Centra los elementos verticalmente */
+    align-items: center; 
+    /* Añade relleno interno de 10px */
+    padding: 10px; 
+    /* Establece un fondo amarillo más oscuro */
+    background-color: #ffda36; 
 }
 
 .header-top img {
-    background-color: blue; /* Simula el logo azul de la imagen */
-    margin-right: 10px; /* Espacio entre logo y título */
-    margin-left: 10px; /* Espacio desde el borde izquierdo */
+    /* Establece un fondo azul para la imagen del logo */
+    background-color: blue; 
+    /* Añade márgenes a la derecha e izquierda de la imagen */
+    margin-right: 10px; 
+    margin-left: 10px; 
 }
 
 .header-top h1 {
-    margin: 0; /* Quita márgenes predeterminados */
-    flex-grow: 1; /* Permite que el título ocupe el espacio restante */
-    text-align: center; /* Centra el título */
+    /* Elimina los márgenes predeterminados del título */
+    margin: 0; 
+    /* Permite que el título crezca para ocupar el espacio restante */
+    flex-grow: 1; 
+    /* Centra el texto del título horizontalmente */
+    text-align: center; 
 }
 
 .header-nav {
-    padding: 20px; /* Espacio interno */
-    background-color: #ffda36; /* Fondo gris para este bloque */
+    /* Añade relleno interno de 20px */
+    padding: 20px; 
+    /* Establece un fondo amarillo más oscuro */
+    background-color: #ffda36; 
 }
 
 .header-nav nav {
-    width: 100%; /* Ocupa todo el ancho del bloque */
+    /* Hace que el contenedor de navegación ocupe todo el ancho */
+    width: 100%; 
 }
 
 .header-nav nav ul {
+    /* Elimina las viñetas de la lista */
     list-style: none;
+    /* Usa flexbox para alinear los ítems en una fila */
     display: flex;
-    justify-content: space-around; /* Distribuye los ítems a lo largo del ancho */
-    padding: 0; /* Quita padding predeterminado */
-    width: 100%; /* Asegura que ocupe todo el ancho */
+    /* Distribuye los ítems con espacio equitativo alrededor */
+    justify-content: space-around; 
+    /* Elimina el padding predeterminado de la lista */
+    padding: 0; 
+    /* Asegura que la lista ocupe todo el ancho */
+    width: 100%; 
 }
 
 .header-nav nav li {
+    /* Añade márgenes de 15px a los lados de cada ítem de la lista */
     margin: 0 15px;
 }
 
 .header-nav nav a {
+    /* Elimina el subrayado de los enlaces */
     text-decoration: none;
-    color: rgb(255, 0, 0); /* Links azules */
+    /* Establece el color de los enlaces en rojo */
+    color: rgb(255, 0, 0); 
 }
 
 main {
-    display: flex; /* Aside izquierda, section derecha */
-        background-color: #f1b253;
-
+    /* Usa flexbox para organizar aside y productos en una fila */
+    display: flex; 
+    /* Establece un fondo naranja claro */
+    background-color: #f1b253;
 }
 
 aside {
-    width: 20%; /* Ancho fijo */
+    /* Establece un ancho del 20% del contenedor padre */
+    width: 20%; 
+    /* Establece un fondo amarillo claro */
     background-color: #ffe657;
+    /* Añade relleno interno de 20px */
     padding: 20px;
 }
 
 aside ul {
+    /* Elimina las viñetas de la lista */
     list-style: none;
 }
 
 aside a {
+    /* Establece el color de los enlaces en rojo */
     color: rgb(255, 0, 0);
-    display: block; /* Para menú vertical */
+    /* Hace que cada enlace ocupe toda la línea */
+    display: block; 
+    /* Añade un margen inferior de 30px entre enlaces */
     margin-bottom: 30px;
 }
 
 .productos {
+    /* Establece un ancho del 80% del contenedor padre */
     width: 80%;
+    /* Añade relleno interno de 20px */
     padding: 20px;
 }
 
 .productos-grid {
+    /* Usa grid para organizar los productos en un layout de cuadrícula */
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    gap: 20px; /* Espacio entre tarjetas */
+    /* Define 4 columnas de igual ancho */
+    grid-template-columns: repeat(4, 1fr);
+    /* Añade un espacio de 20px entre los elementos de la cuadrícula */
+    gap: 20px; 
 }
 
 article {
+    /* Centra el texto dentro de cada artículo */
     text-align: center;
-    border: 1px solid #ddd; /* Borde sutil */
+    /* Añade un borde gris claro de 1px */
+    border: 1px solid #ddd; 
+    /* Añade relleno interno de 10px */
     padding: 10px;
+    /* Establece un fondo blanco */
     background-color: white;
 }
 
 footer {
+    /* Establece un fondo marrón oscuro */
     background-color: #917f2e;
+    /* Añade relleno interno de 20px */
     padding: 20px;
+    /* Centra el texto horizontalmente */
     text-align: center;
-    width: 100%; /* Asegura que ocupe todo el ancho */
-    margin-top: auto; /* Empuja el footer hacia abajo */
+    /* Asegura que el footer ocupe todo el ancho */
+    width: 100%; 
+    /* Empuja el footer hacia abajo en el layout flex */
+    margin-top: auto; 
 }
 
 .footer-grid {
+    /* Usa grid para organizar las columnas del footer */
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    /* Define 5 columnas de igual ancho */
+    grid-template-columns: repeat(5, 1fr); 
+    /* Añade un espacio de 20px entre las columnas */
     gap: 20px;
 }
 
 .columna h4 {
+    /* Añade un margen inferior de 10px al título de cada columna */
     margin-bottom: 10px;
 }
 
 .columna ul {
+    /* Elimina las viñetas de la lista */
     list-style: none;
 }
 
 .columna a {
+    /* Establece el color de los enlaces en un rojo oscuro */
     color: rgb(177, 0, 0);
+    /* Elimina el subrayado de los enlaces */
     text-decoration: none;
 }

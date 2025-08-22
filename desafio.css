@@ -1,45 +1,56 @@
 body {
+    /* Elimina los márgenes predeterminados */
     margin: 0;
-    height: 100vh;
+    /* Establece la altura igual a la altura de la ventana */
+    height: 100vh; 
+    /* Usa flexbox para organizar el contenido */
     display: flex;
+    /* Centra los elementos horizontalmente */
     justify-content: center;
-    align-items: center;
-    background-color: #ffcc41;
+    /* Centra los elementos verticalmente */
+    align-items: center; 
+    /* Establece un fondo color dorado claro */
+    background-color: #ffd970; 
 }
 
-.logo-container {
-    position: relative;
-    width: 300px; /* Tamaño ajustable del contenedor */
-    height: 400px; /* Altura para dar espacio a las formas */
+.forma1, .forma2, .forma3 {
+    /* Permite posicionar las formas de manera absoluta dentro del contenedor */
+    position: absolute; 
 }
 
-.red-circle {
-    position: absolute;
+.forma1 {
+    /* Establece un fondo rojo para la forma */
     background-color: red;
-    border-radius: 50% 0 50% 50%; /* Forma de gota: redondea la parte superior */
+    /* Define el ancho de la forma */
     width: 150px;
+    /* Define la altura de la forma */
     height: 150px;
+    /* Crea un círculo redondeando todos los bordes */
+    border-radius: 50%; 
+    /* Mueve la forma 50% de su altura hacia arriba y 50% de su ancho hacia la derecha */
+    transform: translateY(-50%) translateX(50%);
 }
 
-.red-circle.top {
-    top: -75px; /* Posición vertical desde arriba */
-    left: 75px; /* Centrado horizontalmente */
-    border-radius: 50%; /* Forma de gota: redondea la parte superior */
-}
-
-.red-circle.bottom {
-   /* bottom: 0px; /* Posición vertical desde abajo */
-   /* left: 0px; /* Centrado horizontalmente */
-   top: 75px;
-   left: -75px;
-}
-
-.blue-drop {
-    position: absolute;
+.forma2 {
+    /* Establece un fondo azul para la forma */
     background-color: blue;
-    width: 150px; /* Ancho de la gota */
-    height: 150px; /* Altura de la gota */
-    top: 0px; /* Posición vertical */
-    left: 0px; /* Posición horizontal */
-    border-radius: 50% 0 50% 50%; /* Forma de gota: redondea la parte superior */
+    /* Define el ancho de la forma */
+    width: 150px;
+    /* Define la altura de la forma */
+    height: 150px;
+    /* Crea una forma asimétrica redondeando bordes específicos */
+    border-radius: 50% 0 50% 50%;
+}
+
+.forma3 {
+    /* Establece un fondo rojo para la forma */
+    background-color: red;
+    /* Define el ancho de la forma */
+    width: 150px;
+    /* Define la altura de la forma */
+    height: 150px;
+    /* Crea una forma asimétrica redondeando bordes específicos */
+    border-radius: 50% 0 50% 50%; 
+    /* Mueve la forma 50% de su altura hacia abajo y 50% de su ancho hacia la izquierda */
+    transform: translateY(50%) translateX(-50%);
 }
