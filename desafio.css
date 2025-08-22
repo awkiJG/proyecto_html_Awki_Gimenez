@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffcc41;
+}
+
+.logo-container {
+    position: relative;
+    width: 300px; /* Tamaño ajustable del contenedor */
+    height: 400px; /* Altura para dar espacio a las formas */
+}
+
+.red-circle {
+    position: absolute;
+    background-color: red;
+    border-radius: 50% 0 50% 50%; /* Forma de gota: redondea la parte superior */
+    width: 150px;
+    height: 150px;
+}
+
+.red-circle.top {
+    top: -75px; /* Posición vertical desde arriba */
+    left: 75px; /* Centrado horizontalmente */
+    border-radius: 50%; /* Forma de gota: redondea la parte superior */
+}
+
+.red-circle.bottom {
+   /* bottom: 0px; /* Posición vertical desde abajo */
+   /* left: 0px; /* Centrado horizontalmente */
+   top: 75px;
+   left: -75px;
+}
+
+.blue-drop {
+    position: absolute;
+    background-color: blue;
+    width: 150px; /* Ancho de la gota */
+    height: 150px; /* Altura de la gota */
+    top: 0px; /* Posición vertical */
+    left: 0px; /* Posición horizontal */
+    border-radius: 50% 0 50% 50%; /* Forma de gota: redondea la parte superior */
+}

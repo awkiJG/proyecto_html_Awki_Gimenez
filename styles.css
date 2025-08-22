@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Para que padding no sume al ancho */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffeb78; /* Gris claro como en imagen */
+    min-height: 100vh; /* Mínimo 100% de la altura de la ventana */
+    display: flex; /* Usa flex para controlar la disposición */
+    flex-direction: column; /* Apila header, main y footer en columna */
+    gap: 10px;
+}
+
+header {
+    gap: 10px;
+    padding: 0; /* Quitamos padding global para controlarlo por bloques */
+    display: flex;
+    flex-direction: column; /* Apila los bloques en columna */
+}
+
+.header-top {
+    display: flex; /* Alinea logo y título en una fila */
+    align-items: center; /* Centra verticalmente */
+    padding: 10px; /* Espacio interno */
+    background-color: #ffda36; /* Fondo gris para este bloque */
+}
+
+.header-top img {
+    background-color: blue; /* Simula el logo azul de la imagen */
+    margin-right: 10px; /* Espacio entre logo y título */
+    margin-left: 10px; /* Espacio desde el borde izquierdo */
+}
+
+.header-top h1 {
+    margin: 0; /* Quita márgenes predeterminados */
+    flex-grow: 1; /* Permite que el título ocupe el espacio restante */
+    text-align: center; /* Centra el título */
+}
+
+.header-nav {
+    padding: 20px; /* Espacio interno */
+    background-color: #ffda36; /* Fondo gris para este bloque */
+}
+
+.header-nav nav {
+    width: 100%; /* Ocupa todo el ancho del bloque */
+}
+
+.header-nav nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Distribuye los ítems a lo largo del ancho */
+    padding: 0; /* Quita padding predeterminado */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.header-nav nav li {
+    margin: 0 15px;
+}
+
+.header-nav nav a {
+    text-decoration: none;
+    color: rgb(255, 0, 0); /* Links azules */
+}
+
+main {
+    display: flex; /* Aside izquierda, section derecha */
+        background-color: #f1b253;
+
+}
+
+aside {
+    width: 20%; /* Ancho fijo */
+    background-color: #ffe657;
+    padding: 20px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside a {
+    color: rgb(255, 0, 0);
+    display: block; /* Para menú vertical */
+    margin-bottom: 30px;
+}
+
+.productos {
+    width: 80%;
+    padding: 20px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 20px; /* Espacio entre tarjetas */
+}
+
+article {
+    text-align: center;
+    border: 1px solid #ddd; /* Borde sutil */
+    padding: 10px;
+    background-color: white;
+}
+
+footer {
+    background-color: #917f2e;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    margin-top: auto; /* Empuja el footer hacia abajo */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    gap: 20px;
+}
+
+.columna h4 {
+    margin-bottom: 10px;
+}
+
+.columna ul {
+    list-style: none;
+}
+
+.columna a {
+    color: rgb(177, 0, 0);
+    text-decoration: none;
+}
